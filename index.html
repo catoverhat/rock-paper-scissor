@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="intro" class="intro">
+      <span class="intro-text">So!</span>
+      <span class="intro-text">You've come to challenge me</span>
+      <span id="intro-end" class="intro-text">let me tell YOU</span>
+    </div>
+    <div id="gif-container" class="gif-container">
+      <img
+        src="./img/ezgif.com-gif-maker(1).gif"
+        alt="rock_paper_scissor.gif"
+      />
+      <button id="fight-me-button">Fight me</button>
+    </div>
+    <div id="game-windows">
+      <div class="avatar">
+        <p>Fight me</p>
+        <img width="100" height="100" src="./img/funny.gif" alt="CPU-avatar" />
+        <p>Choose your destiny</p>
+      </div>
+      <div id="pic-container" class="pic-container">
+        <img
+          id="rock-button"
+          src="./img/rock.avif"
+          height="200"
+          width="150"
+          alt="rock"
+        />
+        <img
+          id="paper-button"
+          src="./img/paper.jpg"
+          height="200"
+          width="150"
+          alt="paper"
+        />
+        <img
+          id="scissor-button"
+          src="./img/scissor.webp"
+          height="200"
+          width="150"
+          alt="scissor"
+        />
+      </div>
+    </div>
+    <div id="score-window">
+      <div>Wins the first to reach 5 wins</div>
+      <div class="score">
+        <div id="human">
+          <h1>Your Score</h1>
+          <p>0</p>
+        </div>
+        <div id="ai">
+          <h1>AI Score</h1>
+          <p>0</p>
+        </div>
+      </div>
+      <div><p id="ganador"></p></div>
+    </div>
+    <div id="pantalla-ganador">
+      <img
+        height="280"
+        width="498"
+        src="./img/kazuma-konosuba.gif"
+        alt="kazuma-konosuba.gif"
+      />
+      <button id="ganador-button">Let's Play again</button>
+    </div>
+    <div id="pantalla-perdedor">
+      <img
+        height="280"
+        width="498"
+        src="./img/kazuma-suprised.gif"
+        alt="kazuma-suprised.gif"
+      />
+      <button id="perdedor-button">Dare to play ME again</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
