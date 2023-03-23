@@ -1,23 +1,12 @@
-const intro = document.getElementById("intro");
-const introEnd = document.getElementById("intro-end");
-const gifContainer = document.getElementById("gif-container");
-const fightButton = document.getElementById("fight-me-button");
-const picContainer = document.getElementById("pic-container");
-const gameWindows = document.getElementById("game-windows");
-const ganador = document.getElementById("ganador");
-const contadorHuman = document.getElementById("human");
-const contadorAI = document.getElementById("ai");
-const scoreWindow = document.getElementById("score-window");
-const pantallaGanador = document.getElementById("pantalla-ganador");
-const pantallaPerdedor = document.getElementById("pantalla-perdedor");
-const botonGanador = document.getElementById("ganador-button");
-const botonPerdedor = document.getElementById("perdedor-button");
 const rpsc = ["rock", "paper", "scissor"];
 let user = "";
 let compScore = 0;
 let userScore = 0;
 
 // Wait for the animation on the intro to end before hiding it and showing the game
+const intro = document.getElementById("intro");
+const introEnd = document.getElementById("intro-end");
+const gifContainer = document.getElementById("gif-container");
 introEnd.addEventListener("animationend", () => {
   setTimeout(() => {
     intro.style.display = "none";
@@ -26,6 +15,9 @@ introEnd.addEventListener("animationend", () => {
 });
 
 // Show the game when the "Fight me" button is clicked
+const fightButton = document.getElementById("fight-me-button");
+const gameWindows = document.getElementById("game-windows");
+const scoreWindow = document.getElementById("score-window");
 fightButton.addEventListener("click", () => {
   gifContainer.style.display = "none";
   gameWindows.style.display = "flex";
@@ -37,6 +29,9 @@ const computerChoice = () => {
   return rpsc[Math.floor(Math.random() * rpsc.length)];
 };
 
+const picContainer = document.getElementById("pic-container");
+const contadorHuman = document.getElementById("human");
+const contadorAI = document.getElementById("ai");
 picContainer.addEventListener("click", (event) => {
   if (event.target.id === "rock-button") {
     user = rpsc[0];
@@ -54,6 +49,7 @@ picContainer.addEventListener("click", (event) => {
 
 
 // Determine who won the game and update the score
+const ganador = document.getElementById("ganador");
 const juego = (user, cpu) => {
   if (user === cpu) {
     ganador.textContent = "It's a tie";
@@ -84,6 +80,8 @@ const condicionGanar = () => {
 };
 
 // Handle clicks on the "Play again" button when the user wins
+const pantallaGanador = document.getElementById("pantalla-ganador");
+const botonGanador = document.getElementById("ganador-button");
 botonGanador.addEventListener("click", () => {
   pantallaGanador.style.display = "none";
   gameWindows.style.display = "flex";
@@ -96,6 +94,8 @@ botonGanador.addEventListener("click", () => {
   ganador.textContent = "";
 });
 
+const pantallaPerdedor = document.getElementById("pantalla-perdedor");
+const botonPerdedor = document.getElementById("perdedor-button");
 botonPerdedor.addEventListener("click", () => {
   pantallaPerdedor.style.display = "none";
   gameWindows.style.display = "flex";
